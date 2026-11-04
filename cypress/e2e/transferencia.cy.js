@@ -11,7 +11,7 @@ describe('Transferencias', () => {
     })
 
     it('Deve apresentar erro quando tentar transferir mais de 5 mil sem o token ', () => {
-        cy.realizarTransferencia('João da Silva', 'Maria Oliveira', '5001')
+        cy.realizarTransferencia('João da Silva', 'Maria Oliveira', '6000')
 
         cy.verificarMensagemNoToast('Saldo insuficiente para realizar a transferência.')
 
